@@ -16,16 +16,30 @@
 ## Dependencies ----
 ## Amend DESCRIPTION with dependencies read from package code parsing
 attachment::att_amend_desc()
+attachment::att_from_rscripts()
+usethis::use_package("thinkr")
+usethis::use_package("dplyr")
+usethis::use_package("purrr")
+usethis::use_package("tidyr")
+usethis::use_package("plotly")
+usethis::use_pipe()
+usethis::use_package("RTL")
+usethis::use_package("DT")
+usethis::use_package("bslib")
+usethis::use_package("shinipsum")
+usethis::use_package("purrr")
+usethis::use_package("scales")
+usethis::use_package("tidyquant")
 
 ## Add modules ----
 ## Create a module infrastructure in R/
-golem::add_module(name = "name_of_module1", with_test = TRUE) # Name of the module
-golem::add_module(name = "name_of_module2", with_test = TRUE) # Name of the module
+golem::add_module( name = "instruments" , with_test = FALSE) # Name of the module
+golem::add_module(name = "name_of_module2", with_test = FALSE) # Name of the module
 
 ## Add helper functions ----
 ## Creates fct_* and utils_*
-golem::add_fct("helpers", with_test = TRUE)
-golem::add_utils("helpers", with_test = TRUE)
+golem::add_fct("portfolioMTM", with_test = FALSE)
+golem::add_utils("helpers", with_test = FALSE)
 
 ## External resources
 ## Creates .js and .css files at inst/app/www
@@ -63,12 +77,12 @@ covrpage::covrpage()
 usethis::use_github()
 
 # GitHub Actions
-usethis::use_github_action()
+#usethis::use_github_action()
 # Chose one of the three
 # See https://usethis.r-lib.org/reference/use_github_action.html
 usethis::use_github_action_check_release()
-usethis::use_github_action_check_standard()
-usethis::use_github_action_check_full()
+#usethis::use_github_action_check_standard()
+#usethis::use_github_action_check_full()
 # Add action for PR
 usethis::use_github_action_pr_commands()
 
@@ -77,15 +91,15 @@ usethis::use_travis()
 usethis::use_travis_badge()
 
 # AppVeyor
-usethis::use_appveyor()
-usethis::use_appveyor_badge()
+#usethis::use_appveyor()
+#usethis::use_appveyor_badge()
 
 # Circle CI
-usethis::use_circleci()
-usethis::use_circleci_badge()
+#usethis::use_circleci()
+#usethis::use_circleci_badge()
 
 # Jenkins
-usethis::use_jenkins()
+#usethis::use_jenkins()
 
 # GitLab CI
 usethis::use_gitlab_ci()
