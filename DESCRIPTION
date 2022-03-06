@@ -1,10 +1,11 @@
 Package: RTLappOptions
 Title: Options risk at the portfolio level
 Version: 0.0.0.9000
+Date: "2022-03-06"
 Authors@R: 
     person("Philippe", "Cote", , "pcote@ualberta.ca", role = c("cre", "aut"))
-Description: Develop your understanding of risk through active
-    experimentation.
+Description: Develop your understanding of options risk
+    through active experimentation.
 License: MIT + file LICENSE
 Imports: 
     bslib,
